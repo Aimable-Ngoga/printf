@@ -1,9 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
-
-#include <unistd.h>
 #include <stdarg.h>
 #include <stdio.h>
+#include <unistd.h>
 
 #define UNUSED(x) (void)(x)
 #define BUFF_SIZE 1024
@@ -30,6 +29,7 @@ struct fmt
 	char fmt;
 	int (*fn)(va_list, char[], int, int, int, int);
 };
+
 
 /**
  * typedef struct fmt fmt_t - Struct op
@@ -114,4 +114,4 @@ int is_digit(char);
 long int convert_size_number(long int num, int size);
 long int convert_size_unsgnd(unsigned long int num, int size);
 
-#endif
+#endif 
